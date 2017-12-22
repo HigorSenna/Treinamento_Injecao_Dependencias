@@ -1,9 +1,12 @@
 package br.com.treinamento.connection;
 
-public class ConexaoBanco {
+import br.com.treinamento.annotation.BancoTreinamento;
+
+@BancoTreinamento
+public class ConexaoBanco implements IConexao {
 	
 	public void conectar() {
-		System.out.println("Conectado");
+		System.out.println("Banco comum");
 	}
 
 }

@@ -2,15 +2,17 @@ package br.com.treinamento.dao;
 
 import javax.inject.Inject;
 
-import br.com.treinamento.connection.ConexaoBanco;
+import br.com.treinamento.annotation.BancoTreinamento;
+import br.com.treinamento.connection.IConexao;
 
 public class PessoaDAO {
 	
 	@Inject
-	private ConexaoBanco conexaoBanco;
+	@BancoTreinamento
+	private IConexao conexao;
 	
 	public String buscar() {
-		this.conexaoBanco.conectar();
+		this.conexao.conectar();
 		System.out.println("SELECT * FROM Pessoas ");
 		return "SELECT * FROM Pessoas ";
 	}
