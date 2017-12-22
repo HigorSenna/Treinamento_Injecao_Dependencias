@@ -8,5 +8,4 @@ public class ConexaoBanco implements IConexao {
 	public void conectar() {
 		System.out.println("Banco comum");
 	}
-
 }
