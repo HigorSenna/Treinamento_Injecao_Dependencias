@@ -6,7 +6,7 @@ import javax.inject.Named;
 
 import br.com.treinamento.annotation.BancoTreinamento;
 import br.com.treinamento.connection.IConexao;
-
+@Named
 public class PessoaDAO {
 	
 	@Inject
