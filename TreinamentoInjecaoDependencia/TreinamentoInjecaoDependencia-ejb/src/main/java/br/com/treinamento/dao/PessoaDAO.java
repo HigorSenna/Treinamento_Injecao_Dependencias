@@ -1,5 +1,6 @@
 package br.com.treinamento.dao;
 
+import javax.enterprise.inject.Disposes;
 import javax.enterprise.inject.Produces;
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -36,5 +37,9 @@ public class PessoaDAO {
 		a = "Produzida";
 		System.out.println(a);
 		return this;
+	}
+	
+	public void fechar(@Disposes PessoaDAO pessoaDAO) {
+		pessoaDAO = null;
 	}
 }
